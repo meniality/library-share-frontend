@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import LoginForm from './components/header/LoginForm'
+import NavBar from './containers/NavBar'
+import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
-      <h1>Test!</h1>
-      <LoginForm />
+      <Header />
+      <NavBar />
     </div>
   );
 }
