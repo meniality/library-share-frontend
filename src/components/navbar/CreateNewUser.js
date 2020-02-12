@@ -43,46 +43,41 @@ export default class CreateNewUser extends Component {
 
   render(){
     return(
-      <div id="create-new-user-form">
-        <form onSubmit={this.handleSubmit}>
-          <input
-            name='username'
-            placeholder='username'
-            value={this.state.username}
-            onChange={this.handleChange}
-          />
-           <input
-            name='name'
-            placeholder='name'
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
-           <input
-            type='password'
-            name='password'
-            placeholder='password'
-            value={this.state.password}
-            onChange={this.handleChange}
-          />
-            <input
-            type='password'
-            name='verifyPassword'
-            placeholder='verify password'
-            value={this.state.verifyPassword}
-            onChange={this.handleChange}
-          />
-           <input
-            name='email'
-            placeholder='email'
-            value={this.state.email}
-            onChange={this.handleChange}
-          />
-           <input
-            name='phone_number'
-            placeholder='phone number'
-            value={this.state.phone_number}
-            onChange={this.handleChange}
-          />
+      <div className="logout-login" id="create-new-user-form">
+        <form onSubmit={this.handleSubmit} id="createNewUserForm">
+          <label>Create a New User</label>
+          <div>
+            <div id = 'left'>
+              <input
+                name='username'
+                placeholder='username'
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
+                <input
+                name='email'
+                placeholder='email'
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div id = 'right'>
+              <input
+              type='password'
+              name='password'
+              placeholder='password'
+              value={this.state.password}
+              onChange={this.handleChange}
+              />
+              <input
+              type='password'
+              name='verifyPassword'
+              placeholder='verify password'
+              value={this.state.verifyPassword}
+              onChange={this.handleChange}
+              />
+            </div>
+            </div>
           <input 
             type='submit'
           />
