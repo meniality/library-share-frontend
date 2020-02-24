@@ -6,7 +6,7 @@ export default function Logout(props) {
     <div className="logout-login">
       <h4>Welcome, {localStorage.getItem('username')}</h4>
       <Link to="/">
-          <button onClick={props.deleteToken}>
+          <button id="logout-button" onClick={props.deleteToken}>
             Logout
           </button>
         </Link>
