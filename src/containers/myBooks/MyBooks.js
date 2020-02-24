@@ -21,7 +21,10 @@ componentDidMount(){
     return (
       this.props.myBooks && this.props.myBooks.length > 0
         ?<div id="my-bookshelf">
-          <BookContainer myBooks={this.props.myBooks}/>
+          <BookContainer 
+            myBooks={this.props.myBooks}
+            removeBookFromMyBook ={this.props.removeBookFromMyBook}
+            />
         </div>
         :<h4>You have no books in your library. Please add some below!</h4>
     )
