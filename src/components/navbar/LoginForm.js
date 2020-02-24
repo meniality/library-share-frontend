@@ -24,8 +24,10 @@ class LoginForm extends Component {
     })
     .then(response => response.json())
     .then(userData => {
-      if(userData.ok) {
+      if(userData.token) {
         localStorage.setItem('token', userData.token)
+        localStorage.setItem('username', userData.username)
+        this.props.setToken(userData.token)
       }
       else {
         alert("Invalid Username or Password")
@@ -43,8 +45,9 @@ class LoginForm extends Component {
 
   render(){
     return (
-      <div>
-        <form onSubmit = {this.handleSubmit}>
+      <div className="logout-login">
+        <form onSubmit = {this.handleSubmit} id="login-form">
+          <label>Login</label>
           <input 
             placeholder = "Username"
             name ="username"
