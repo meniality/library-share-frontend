@@ -12,7 +12,7 @@ export default function Kisoks(){
   const zoom= 11
   return(
     <div id ="map">
-      <div id="kiosk-title"><h2>Locations of give a book/take a book kisoks.</h2></div>
+      <div id="kiosk-title"><h2>Locations of give a book/take a book kiosks.</h2></div>
       <GoogleMapReact
         bootstrapURLKeys={{ key: 'AIzaSyDuWImETCBx1qTLleQeZpQaT6j8UkLYvnE' }}
         defaultCenter={center}
